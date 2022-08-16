@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/SidebarOption.css";
+import "../styles/sidebarOption.css";
 const SidebarOption = ({ Icon, title }) => {
   return <div></div>;
 };
