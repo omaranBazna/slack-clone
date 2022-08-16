@@ -4,6 +4,7 @@ import { Avatar } from "@material-ui/core";
 import AccessTimeFilledOutlinedIcon from "@mui/icons-material/AccessTimeFilledOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import HelpCenterOutlinedIcon from "@mui/icons-material/HelpCenterOutlined";
+import "../styles/Header.css";
 const Header = () => {
   return (
     <div className="header">
