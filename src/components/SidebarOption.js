@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/SidebarOption.css";
-const SidebarOption = () => {
+const SidebarOption = ({ Icon, title }) => {
   return <div></div>;
 };
 
