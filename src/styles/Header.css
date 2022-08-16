@@ -12,3 +12,15 @@
     align-items: center;
     margin-left:20px;
 }
+
+.header-left > .MuiSvgIcon-root {
+    margin-left:auto;
+    margin-right:30px;
+}
+.header-search{
+    flex:0.4;
+
+}
+.header-right{
+   flex:0.3; 
+}
