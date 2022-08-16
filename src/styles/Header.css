@@ -19,7 +19,7 @@
 }
 .header-search{
     flex:0.4;
-
+background-color: var(--slack-light);
 }
 .header-right{
    flex:0.3; 
