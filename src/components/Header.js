@@ -14,6 +14,7 @@ const Header = () => {
       </div>
       <div className="header-search">
         <SearchIcon />
+        <input type="text" placeholder="search for channels" />
       </div>
       <div className="header-right">
         <HelpCenterOutlinedIcon />
