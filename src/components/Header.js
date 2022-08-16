@@ -1,22 +1,21 @@
 import React from "react";
 
 import { Avatar } from "@material-ui/core";
-
-import AccessTimeIcon from "@material-ui/icons";
-import SearchIcon from "@material-ui/icons";
-import HelpOutlineIcon from "@material-ui/icons";
+import AccessTimeFilledOutlinedIcon from "@mui/icons-material/AccessTimeFilledOutlined";
+import SearchIcon from "@mui/icons-material/Search";
+import HelpCenterOutlinedIcon from "@mui/icons-material/HelpCenterOutlined";
 const Header = () => {
   return (
     <div className="header">
       <div className="header-left">
         <Avatar className="header-avatar" alt={"omaran bazna"} src={""} />
-        <AccessTimeIcon />
+        <AccessTimeFilledOutlinedIcon />
       </div>
       <div className="header-search">
         <SearchIcon />
       </div>
       <div className="header-right">
-        <HelpOutlineIcon />
+        <HelpCenterOutlinedIcon />
       </div>
     </div>
   );
