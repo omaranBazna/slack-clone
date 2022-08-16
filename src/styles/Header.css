@@ -20,6 +20,9 @@
 .header-search{
     flex:0.4;
 background-color: var(--slack-light);
+text-align:center;
+display:flex;
+padding:0 50px;
 }
 .header-right{
    flex:0.3; 
