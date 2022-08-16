@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Header";
+
 import { Avatar } from "@material-ui/core";
 const Header = () => {
   return (
