@@ -10,9 +10,14 @@ const Header = () => {
     <div className="header">
       <div className="header-left">
         <Avatar className="header-avatar" alt={"omaran bazna"} src={""} />
+        <AccessTimeIcon />
       </div>
-      <div className="header-search"></div>
-      <div className="header-right"></div>
+      <div className="header-search">
+        <SearchIcon />
+      </div>
+      <div className="header-right">
+        <HelpOutlineIcon />
+      </div>
     </div>
   );
 };
