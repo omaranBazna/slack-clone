@@ -15,7 +15,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddIcon from "@mui/icons-material/Add";
 import { useState, useEffect } from "react";
 import { db } from "../firebase";
-import { collection, onSnapshot } from "firebase/firestore";
+import { collection, onSnapshot, query } from "firebase/firestore";
 const Sidebar = () => {
   const [channels, setChannels] = useState([]);
 
@@ -27,9 +27,12 @@ const Sidebar = () => {
       }))
     );
   };
+
   useEffect(() => {
-    db.collection("rooms").onSnapshot(snapshot_callback);
+    const q = query(collection(db, "rooms"));
+    const unsubscribe = onSnapshot(q, snapshot_callback);
   }, []);
+
   return (
     <div className="sidebar">
       <div className="sidebar-header">
