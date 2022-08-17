@@ -4,11 +4,12 @@ import Sidebar from "./components/Sidebar";
 import { Routes, Route } from "react-router-dom";
 import Chat from "./components/Chat";
 import Login from "./components/Login";
-
+import { useSelector } from "react-redux/es/exports";
 function App() {
+  const user = useSelector((state) => state.user.userName);
   return (
     <div className="app">
-      {true ? (
+      {!user ? (
         <Login />
       ) : (
         <>

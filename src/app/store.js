@@ -1,6 +1,6 @@
-import { configstore } from "firebase-tools/lib/configstore";
+import { configureStore } from "@reduxjs/toolkit";
 import { userReducer } from "./features/userSlice";
-export const store = configstore({
+export const store = configureStore({
   reducer: {
     user: userReducer,
   },
