@@ -3,16 +3,15 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import { StateProvider } from "./app/stateProvider";
-import { initialState } from "./app/reducer";
-import reducer from "./app/reducer";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <StateProvider initialState={initialState} reducer={reducer}>
+  <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </StateProvider>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
