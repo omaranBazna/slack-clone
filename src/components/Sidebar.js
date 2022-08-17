@@ -16,8 +16,9 @@ const Sidebar = () => {
           </h3>{" "}
         </div>
         <CreateIcon />
-        <SidebarOption Icon={InsertCommentIcon} title="insert comment" />
       </div>
+      <SidebarOption Icon={InsertCommentIcon} title="insert comment" />
+      <SidebarOption title="youtube" />
     </div>
   );
 };
