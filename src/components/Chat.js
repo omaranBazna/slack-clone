@@ -18,7 +18,7 @@ const Chat = () => {
         </div>
         <div className="chat-header-right">
           <p>
-            <InfoOutlinedIcon />
+            <InfoOutlinedIcon /> Details
           </p>
         </div>
       </div>
