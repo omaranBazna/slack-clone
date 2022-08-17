@@ -25,6 +25,7 @@ const ChatInput = ({ channelName, channelId }) => {
           timestamp: serverTimestamp(new Date(Date.now())),
         }
       );
+      setInput("");
     }
   };
   return (

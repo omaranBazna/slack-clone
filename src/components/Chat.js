@@ -4,7 +4,14 @@ import { useParams } from "react-router-dom";
 import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { db } from "../firebase";
-import { collection, onSnapshot, query, doc, getDoc } from "firebase/firestore";
+import {
+  collection,
+  onSnapshot,
+  query,
+  orderBy,
+  doc,
+  getDoc,
+} from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Message from "./Message";
 import ChatInput from "./ChatInput";
@@ -30,7 +37,10 @@ const Chat = () => {
     if (roomId) {
       if (getDocF()) {
         ///bring the messages
-        const collectionRef = collection(docRef, "messages");
+        const collectionRef = query(
+          collection(docRef, "messages"),
+          orderBy("timestamp")
+        );
         const unsubscribe = onSnapshot(collectionRef, (snapshot) => {
           setMessages(
             snapshot.docs.map((doc) => {
