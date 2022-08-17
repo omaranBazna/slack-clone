@@ -9,13 +9,14 @@ import { useEffect, useState } from "react";
 const Chat = () => {
   const { roomId } = useParams();
   const [name, setName] = useState("");
-
+  const [messages, setMessages] = useState([]);
   useEffect(() => {
     const docRef = doc(db, "rooms", roomId);
     const getDocF = async () => {
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         setName(docSnap.data().name);
+
         return true;
       } else {
         // doc.data() will be undefined in this case
@@ -27,6 +28,10 @@ const Chat = () => {
     if (roomId) {
       if (getDocF()) {
         ///bring the messages
+        const collectionRef = collection(docRef, "messages");
+        const unsubscribe = onSnapshot(collectionRef, (snapshot) => {
+          setMessages(snapshot.docs.map((doc) => doc.data()));
+        });
       }
     }
   }, [roomId]);

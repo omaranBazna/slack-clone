@@ -14,9 +14,12 @@ const SidebarOption = ({ Icon, title, id, addChannelOption }) => {
   const addChannel = async () => {
     const channelName = prompt("please enter the channel name");
     if (channelName) {
-      await setDoc(doc(db, "rooms", `${Math.floor(Math.random() * 1000000)}`), {
-        name: channelName,
-      });
+      await setDoc(
+        doc(db, "rooms", `${Math.floor(Math.random() * 100000000000)}`),
+        {
+          name: channelName,
+        }
+      );
     }
   };
   return (
