@@ -4,7 +4,9 @@ import Sidebar from "./components/Sidebar";
 import { Routes, Route } from "react-router-dom";
 import Chat from "./components/Chat";
 import Login from "./components/Login";
+import { useState } from "react";
 function App() {
+  const [user, setUser] = useState(null);
   return (
     <div className="app">
       {true ? (
