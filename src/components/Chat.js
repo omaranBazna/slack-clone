@@ -6,6 +6,7 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { db } from "../firebase";
 import { collection, onSnapshot, query, doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
+import Message from "./Message";
 const Chat = () => {
   const { roomId } = useParams();
   const [name, setName] = useState("");
@@ -30,7 +31,11 @@ const Chat = () => {
         ///bring the messages
         const collectionRef = collection(docRef, "messages");
         const unsubscribe = onSnapshot(collectionRef, (snapshot) => {
-          setMessages(snapshot.docs.map((doc) => doc.data()));
+          setMessages(
+            snapshot.docs.map((doc) => {
+              return { id: doc.id, data: doc.data() };
+            })
+          );
         });
       }
     }
@@ -52,7 +57,17 @@ const Chat = () => {
           </p>
         </div>
       </div>
-      <div className="chat-messages"></div>
+      <div className="chat-messages">
+        {messages.map((message) => {
+          <Message
+            key={message.id}
+            message={message.data.message}
+            user={message.data.user}
+            userPhoto={message.data.userPhoto}
+            timestamp={message.data.timestamp}
+          />;
+        })}
+      </div>
     </div>
   );
 };
