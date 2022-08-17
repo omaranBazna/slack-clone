@@ -6,3 +6,7 @@ body{
   --slack-option:#340e36;
   --slack-horizontal:#49274b;
 }
+.app-body{
+  display:flex;
+  height:100vh;
+}
