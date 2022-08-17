@@ -6,8 +6,10 @@ const SidebarOption = ({ Icon, title, id, addChannelOption }) => {
 
   const selectChannel = () => {
     if (id) {
+      navigator(`../rooms/${id}`, { replace: true });
     }
   };
+  const addChannel = () => {};
   return (
     <div
       className="sidebar-option"
