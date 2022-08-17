@@ -13,7 +13,11 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddIcon from "@mui/icons-material/Add";
+import { useState, useEffect } from "react";
 const Sidebar = () => {
+  const [channels, setChannels] = useState([]);
+
+  useEffect(() => {}, []);
   return (
     <div className="sidebar">
       <div className="sidebar-header">
