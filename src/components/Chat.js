@@ -43,7 +43,6 @@ const Chat = () => {
   console.log(messages);
   return (
     <div className="chat">
-      <h1>you are in room {roomId} </h1>
       <div className="chat-header">
         <div className="chat-header-left">
           <h4 className="chat-channel-name">
