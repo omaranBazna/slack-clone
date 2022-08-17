@@ -8,7 +8,10 @@ const Message = ({ message, timestamp, user, userPhoto }) => {
           <img src={userPhoto} />
           <div className="message-info">
             <h4>
-              {user} {new Date(timestamp?.toDate()).toUTCString()}
+              {user}{" "}
+              <span className="message-timestamp">
+                {new Date(timestamp?.toDate()).toUTCString()}
+              </span>
             </h4>
             <p> message</p>
           </div>

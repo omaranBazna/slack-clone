@@ -6,5 +6,10 @@
     height:50px;
     width:50px;
     Object-fit:contain;
-    
+
+}
+.message-timestamp{
+    color:grey;
+    font-weight:300;
+
 }
