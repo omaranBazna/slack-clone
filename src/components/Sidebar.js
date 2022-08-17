@@ -29,7 +29,7 @@ const Sidebar = () => {
   };
 
   useEffect(() => {
-    const q = query(collection(db, "rooms"));
+    const q = collection(db, "rooms");
     const unsubscribe = onSnapshot(q, snapshot_callback);
   }, []);
 
