@@ -5,11 +5,13 @@ import AccessTimeFilledOutlinedIcon from "@mui/icons-material/AccessTimeFilledOu
 import SearchIcon from "@mui/icons-material/Search";
 import HelpCenterOutlinedIcon from "@mui/icons-material/HelpCenterOutlined";
 import "../styles/Header.css";
+import { useSelector } from "react-redux/es/exports";
 const Header = () => {
+  const photo = useSelector((state) => state.user.userPhoto);
   return (
     <div className="header">
       <div className="header-left">
-        <Avatar className="header-avatar" alt={"omaran bazna"} src={""} />
+        <Avatar className="header-avatar" alt={"omaran bazna"} src={photo} />
         <AccessTimeFilledOutlinedIcon />
       </div>
       <div className="header-search">

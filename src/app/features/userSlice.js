@@ -10,9 +10,9 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     signInA: (state, action) => {
-      state.userName = action.payload.userName;
-      state.userEmail = action.payload.userEmail;
-      state.userPhoto = action.payload.userPhoto;
+      state.userName = action.payload?.displayName;
+      state.userEmail = action.payload?.email;
+      state.userPhoto = action.payload?.photoURL;
     },
     signOutA: (state, action) => {
       state.userName = "";

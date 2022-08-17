@@ -4,11 +4,15 @@ import { Button } from "@material-ui/core";
 
 import { auth, provider } from "../firebase";
 import { signInWithPopup } from "firebase/auth";
+import { signInA } from "../app/features/userSlice";
+import { useDispatch } from "react-redux";
 const Login = () => {
+  const dispatch = useDispatch();
   const signIn = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         console.log(result);
+        dispatch(signInA(result.user));
       })
       .catch((e) => {
         console.log(e);
