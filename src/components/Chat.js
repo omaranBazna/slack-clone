@@ -35,7 +35,7 @@ const Chat = () => {
       }
     }
   }, [roomId]);
-
+  console.log(messages);
   return (
     <div className="chat">
       <h1>you are in room {roomId} </h1>
