@@ -12,6 +12,7 @@ import AppsIcon from "@mui/icons-material/Apps";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import AddIcon from "@mui/icons-material/Add";
 const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -36,6 +37,8 @@ const Sidebar = () => {
       <SidebarOption Icon={ExpandLessIcon} title="Show less" />
       <hr />
       <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
+      <hr />
+      <SidebarOption Icon={AddIcon} title="add Channels" />
     </div>
   );
 };
