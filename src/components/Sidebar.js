@@ -34,6 +34,7 @@ const Sidebar = () => {
       <hr />
       <SidebarOption Icon={FileCopyIcon} title="File browser" />
       <SidebarOption Icon={ExpandLessIcon} title="Show less" />
+      <hr />
       <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
     </div>
   );

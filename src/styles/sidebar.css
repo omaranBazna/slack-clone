@@ -36,5 +36,5 @@
 .sidebar >hr{
     margin-top:10px;
     margin-bottom:10px ;
-    border-color:1px solid var(--slack-horizontal);
+    border:1px solid var(  --slack-horizontal);
 }
