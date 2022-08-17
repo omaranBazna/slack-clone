@@ -16,14 +16,18 @@ const Chat = () => {
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         setName(docSnap.data().name);
+        return true;
       } else {
         // doc.data() will be undefined in this case
         console.log("No such document!");
+        return false;
       }
     };
 
     if (roomId) {
-      getDocF();
+      if (getDocF()) {
+        ///bring the messages
+      }
     }
   }, [roomId]);
 
