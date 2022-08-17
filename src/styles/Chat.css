@@ -1,5 +1,8 @@
 .chat{
     flex:0.7;
+    flex-grow: 1;
+    overflow-y: scroll;
+    padding-bottom: 150px;
 }
 .chat-header{
     display:flex;
@@ -17,6 +20,12 @@
     margin-right:5px !important;
     font-size:15px;
 }
-.chat-header-name{
+.chat-channel-name{
+    display:flex;
+    align-items: center;
     text-transform: lowercase;
+}
+.chat-channel-name > .MuiSvgIcon-root {
+    font-size: 18px;
+    margin-left: 10px;
 }
