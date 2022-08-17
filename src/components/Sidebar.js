@@ -11,6 +11,7 @@ import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import AppsIcon from "@mui/icons-material/Apps";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -33,6 +34,7 @@ const Sidebar = () => {
       <hr />
       <SidebarOption Icon={FileCopyIcon} title="File browser" />
       <SidebarOption Icon={ExpandLessIcon} title="Show less" />
+      <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
     </div>
   );
 };
