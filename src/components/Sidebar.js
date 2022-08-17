@@ -30,6 +30,7 @@ const Sidebar = () => {
       <SidebarOption Icon={BookmarkIcon} title="Channel browser" />
       <SidebarOption Icon={PeopleAltIcon} title="People & user groups" />
       <SidebarOption Icon={AppsIcon} title="Apps" />
+      <hr />
       <SidebarOption Icon={FileCopyIcon} title="File browser" />
       <SidebarOption Icon={ExpandLessIcon} title="Show less" />
     </div>
