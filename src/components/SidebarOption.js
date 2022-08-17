@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/sidebarOption.css";
 import { useNavigate } from "react-router-dom";
+import { db } from "../firebase";
+import { collection, doc, setDoc } from "firebase/firestore";
 const SidebarOption = ({ Icon, title, id, addChannelOption }) => {
   const navigator = useNavigate();
 
@@ -9,7 +11,14 @@ const SidebarOption = ({ Icon, title, id, addChannelOption }) => {
       navigator(`../rooms/${id}`, { replace: true });
     }
   };
-  const addChannel = () => {};
+  const addChannel = async () => {
+    const channelName = prompt("please enter the channel name");
+    if (channelName) {
+      await setDoc(doc(db, "rooms", `${Math.floor(Math.random() * 1000000)}`), {
+        name: channelName,
+      });
+    }
+  };
   return (
     <div
       className="sidebar-option"
