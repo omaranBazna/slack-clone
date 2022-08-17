@@ -12,7 +12,7 @@ const Chat = () => {
       <div className="chat-header">
         <div className="chat-header-left">
           <h4 className="chat-channel-name">
-            <strong>#{general}</strong>
+            <strong>#general</strong>
             <StarBorderOutlinedIcon />
           </h4>
         </div>
