@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/slack-clone/static/css/main.92501bc1.css",
+    "main.js": "/slack-clone/static/js/main.0fa04e08.js",
+    "index.html": "/slack-clone/index.html",
+    "main.92501bc1.css.map": "/slack-clone/static/css/main.92501bc1.css.map",
+    "main.0fa04e08.js.map": "/slack-clone/static/js/main.0fa04e08.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92501bc1.css",
+    "static/js/main.0fa04e08.js"
+  ]
+}
