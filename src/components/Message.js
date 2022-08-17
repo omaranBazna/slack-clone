@@ -5,7 +5,7 @@ const Message = ({ message, timestamp, user, userImg }) => {
     <div className="message">
       <img src={userImg} />
       <div className="message-info">
-        <h4>{user}</h4>
+        <h4>{user}</h4> timestamp
         <p>{message}</p>
       </div>
     </div>

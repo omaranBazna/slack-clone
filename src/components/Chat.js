@@ -40,7 +40,7 @@ const Chat = () => {
       }
     }
   }, [roomId]);
-
+  console.log(messages);
   return (
     <div className="chat">
       <h1>you are in room {roomId} </h1>
@@ -59,13 +59,15 @@ const Chat = () => {
       </div>
       <div className="chat-messages">
         {messages.map((message) => {
-          <Message
-            key={message.id}
-            message={message.data.message}
-            user={message.data.user}
-            userPhoto={message.data.userPhoto}
-            timestamp={message.data.timestamp}
-          />;
+          return (
+            <Message
+              key={message.id}
+              message={message.data.message}
+              user={message.data.user}
+              userPhoto={message.data.userPhoto}
+              timestamp={message.data.timestamp}
+            />
+          );
         })}
       </div>
     </div>
