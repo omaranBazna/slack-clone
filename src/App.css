@@ -5,6 +5,7 @@ body{
   --slack-icon:#49274b;
   --slack-option:#340e36;
   --slack-horizontal:#49274b;
+  --slack-login_button:rgb(34, 159, 34);
 }
 .app-body{
   display:flex;
