@@ -1,6 +1,13 @@
 import React from "react";
 import "../styles/sidebarOption.css";
+import { useNavigate } from "react-router-dom";
 const SidebarOption = ({ Icon, title, id, addChannelOption }) => {
+  const navigator = useNavigate();
+
+  const selectChannel = () => {
+    if (id) {
+    }
+  };
   return (
     <div
       className="sidebar-option"
