@@ -3,6 +3,7 @@ import "../styles/sidebar.css";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import CreateIcon from "@mui/icons-material/Create";
 import SidebarOption from "./SidebarOption";
+import InsertCommentIcon from "@mui/icons-material/InsertComment";
 const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -15,7 +16,7 @@ const Sidebar = () => {
           </h3>{" "}
         </div>
         <CreateIcon />
-        <SidebarOption />
+        <SidebarOption Icon={InsertCommentIcon} title="insert comment" />
       </div>
     </div>
   );
