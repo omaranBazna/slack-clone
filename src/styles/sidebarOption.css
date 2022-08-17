@@ -1,0 +1,11 @@
+.sidebar-option{
+    display:flex;
+align-items:center;
+font-size:12px;
+padding-left:2px;
+cursor:pointer;
+
+}
+.sidebar-option:hover{
+    background-color:var(--slack-option) ;
+}
