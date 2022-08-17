@@ -7,5 +7,10 @@ cursor:pointer;
 
 }
 .sidebar-option:hover{
+    opacity:0.9;
     background-color:var(--slack-option) ;
+}
+.sidebar-option-icon{
+    padding:10px;
+    font-size:15px !important;
 }
