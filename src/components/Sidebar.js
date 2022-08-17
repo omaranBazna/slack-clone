@@ -16,8 +16,12 @@ import AddIcon from "@mui/icons-material/Add";
 import { useState, useEffect } from "react";
 import { db } from "../firebase";
 import { collection, onSnapshot, query } from "firebase/firestore";
+import { useSelector } from "react-redux/es/exports";
+
 const Sidebar = () => {
   const [channels, setChannels] = useState([]);
+
+  const name = useSelector((state) => state.user.userName);
 
   const snapshot_callback = (snapshot) => {
     setChannels(
@@ -37,10 +41,9 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="sidebar-header">
         <div className="sidebar-info">
-          <h2>Omaran Server</h2>
           <h3>
             <FiberManualRecordIcon />
-            Omaran Bazna
+            {name}
           </h3>{" "}
         </div>
         <CreateIcon />
