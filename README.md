@@ -16,4 +16,4 @@ Slack App clone:
 
 #I used Git&GitHub for version control.
 
-#Link to demo: 
+#Link to demo: https://omaranbazna.github.io/slack-clone/
